@@ -1,0 +1,155 @@
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <meta name="referrer" content="no-referrer">
+  <style>
+    body {
+      width: 800px;
+      height: 550px;
+      background-color: #343434;
+	  border: 5px solid white;
+	  border-radius: 35px;
+    }
+    #topbar {
+      width: 800px;
+      height: 80px;
+      background-color: #4c4c4c;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      position: relative;
+    }
+	#topbar h1 {
+      position: absolute;
+      color: #4c4c4c;
+      background-color: white;
+	  left: 30px;
+	  top: 6px;
+	  font-size: 40px;
+    }
+    .whitebar {
+      width: 100%;
+      height: 5px;
+      background-color: white;
+	  position: relative;
+    }
+    #bottombar{
+      width: 800px;
+      height: 80px;
+      background-color: #4c4c4c;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+	.content {
+	  height: 380px;
+      width: 100%;
+	}
+    #team-logo {
+      width: 150px;
+      height: 150px;
+	  border: 3px solid white;
+	  position: relative;
+	  top: 15px;
+	  left: 15px;
+	  float: left;
+    }
+	#blue-bar {
+	  width: 73%;
+	  height: 150px;
+	  border: 2px solid white;
+	  background: linear-gradient(to bottom, #7a8fa2, #8ca8c2);
+	  margin-right: 20px;
+	  margin-top: 15px;
+	  float: right;
+	}
+	#blue-bar h2 {
+	  color: white;
+	  text-align: center
+	}
+	#blue-bar ul li {
+	  display: inline-block;
+	  width: 65px;
+	  height: 20px;
+	  border: 1px solid white;
+	  margin-top: 15px;
+	  margin-left: 15px;
+	  text-align: center;
+	  color: white;
+      font-size: 10px;
+      line-height: 20px;
+	  overflow: hidden;
+	}
+	#blue-bar-stats {
+	  width: 95.3%;
+	  height: 180px;
+	  border: 2px solid white;
+	  background: linear-gradient(to bottom, #7a8fa2, #8ca8c2);
+	  margin-right: 20px;
+	  margin-top: 15px;
+	  float: right;
+	}
+	#dark-gray-rect {
+	  width: 98.5%;
+	  height: 20px;
+	  background-color: #343434;
+	  margin-top: 15px;
+	  margin-left: 5px;
+	  color: white;
+	}
+	#gray-rect {
+	  width: 98.5%;
+	  height: 18px;
+	  background-color: #4c4c4c;
+	  margin-left: 5px;
+	  color: white;
+	}
+	#light-gray-rect {
+	  width: 98.5%;
+	  height: 18px;
+	  background-color: #6b6b6b;
+	  margin-left: 5px;
+	  color: white;
+	}
+	#division-logo {
+      width: 40px;
+      height: 40px;
+	  border: 3px solid white;
+	  float: right;
+	  margin-top: 20px;
+	  margin-right: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="topbar">
+  <img src={{divisionLogo}} id="division-logo">
+    <h1>
+      {{teamName}}'s Stats
+    </h1>
+  </div>
+  <div class="whitebar"></div>
+  <div class="content">
+    <img src={{logoSource}} id="team-logo">
+	<div id="blue-bar">
+	  <h2>Team's players</h2>
+	  <ul>
+	    <li>{{player0}}</li>
+	    <li>{{player1}}</li>
+	    <li>{{player2}}</li>
+	    <li>{{player3}}</li>
+	    <li>{{player4}}</li>
+	    <li>{{player5}}</li>
+	  </ul>
+    </div>
+	<div id="blue-bar-stats">
+	  <div id = "dark-gray-rect"><p>VRML TEAM STATS</p></div>
+	  <div id = "gray-rect">Region: {{region}}</div>
+	  <div id = "light-gray-rect">MMR: {{mmr}}</div>
+	  <div id = "gray-rect">Rank: {{rank}}</div>
+	  <div id = "light-gray-rect">Wins: {{teamW}}</div>
+	  <div id = "gray-rect">Loss: {{teamL}}</div>
+	  <div id = "light-gray-rect">Division: {{division}}</div>
+	  <div id = "gray-rect">Points: {{pts}}</div>
+	</div>
+  </div>
+  <div class="whitebar"></div>
+  <div id="bottombar"></div>
+</body>
